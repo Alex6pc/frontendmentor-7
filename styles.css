@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Merriweather&family=Montserrat&family=Outfit:wght@300;400;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sacramento&display=swap');
+:root {
+    --Soft-blue:hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue1: hsl(217, 54%, 11%);
+    --Very-dark-blue2: hsl(216, 50%, 16%);
+    --Very-dark-blue3:  hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+*{  
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box;
+}
+/* font-family: 'Outfit', sans-serif; */
+body{
+    font-size: 18px;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--Very-dark-blue1);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mainContainer{
+    background-color: var(--Very-dark-blue2);
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 20px;
+    box-shadow: 0 30px 0 20px hsl(216, 50%, 10%);
+}
+
+/* -----------MAIN PHOTO with Hover */
+.cardPhoto{
+    width: 270px;
+    height: 250px;
+    margin: 20px auto auto;
+    border-radius: 10px;
+}
+.secondPhoto{
+    width: 15%;
+}
+.hoverPhoto{
+    position: absolute;
+    width: 270px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 0 20px;
+    border-radius: 10px;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    cursor: pointer;
+    visibility: hidden;
+}
+.hoverPhoto:hover {
+    visibility: visible;
+}
+.cardPhoto:hover + .hoverPhoto {
+    visibility: visible;
+    position: absolute;
+}
+
+/* ----------- Card-Text */
+.card{
+    width: 270px;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0 0 0;
+}
+.card > div{
+    margin: 11px 0;
+    font-size: 15px;
+}
+.cardText p {
+    color: var(--Soft-blue);
+}
+.card .cardStatus{
+    display: flex;
+    justify-content: space-between; 
+}
+.card #ethStatus{
+    color: var(--Cyan);
+    display: flex;
+}
+.card #dayStatus{
+    color: var(--Soft-blue);
+    display: flex;
+    margin-left: 75px;
+}
+hr{
+    height: 1px;
+    background-color: var(--Very-dark-blue3);
+    border: none;
+}
+.avatarCreator{
+    display: flex;
+    align-items: center;
+    margin: 5px 0 0 0;
+}
+.avatar{
+    width: 30px;
+    border: 1.5px solid #fff;
+    border-radius: 50%;
+    margin-right: 9px;
+}
+#photoStatus{
+    margin: 10px 0 0 10px;
+    color: var(--Soft-blue);
+}
+
+
+/* .mainContainer .photoContainer::before {
+    content: "";
+    background: teal;
+    border-radius: 1rem;
+    position: absolute;
+    width: 100%;
+    z-index: 8;
+  }
+.mainContainer .photoContainer::after {
+    display: flex;
+    align-items: center;
+    z-index: 10;
+  } */
+
+  /* @media screen and (min-width: 500px) {
+    .card {
+      width: 21.875rem;
+    }
+  } */
