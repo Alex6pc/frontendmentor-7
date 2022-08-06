@@ -113,7 +113,10 @@ hr{
     margin: 10px 0 0 10px;
     color: var(--Soft-blue);
 }
-
+.attribution{
+    font-size: 13px;
+    margin-top: 15px;
+}
 
 /* .mainContainer .photoContainer::before {
     content: "";
